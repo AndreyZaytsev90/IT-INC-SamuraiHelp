@@ -1,4 +1,6 @@
-export type ThingsToBuyPropsType = {
+export type ThingsToBuyPropsType = Array<ThingPropsType>
+
+export type ThingPropsType = {
     id: number,
     title: string,
     expectedPrice: string,
@@ -8,5 +10,5 @@ export type ThingsToBuyPropsType = {
 
 export type ShopListPropsType = {
     title: string,
-    whatToBuy: ThingsToBuyPropsType[],
+    whatToBuy: ThingsToBuyPropsType
 }

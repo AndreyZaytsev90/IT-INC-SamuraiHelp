@@ -3,9 +3,10 @@ import './App.css';
 import {ShopList} from "./ShopList";
 import {ThingsToBuyPropsType} from "./Typisation";
 
+
 function App() {
 
-    const thingsToBuy: Array<ThingsToBuyPropsType> = [
+    const thingsToBuy: ThingsToBuyPropsType = [
         {id: 1, title: 'Milk', expectedPrice: '$1.99', realPrice: '$1.99', inCart: true},
         {id: 2, title: 'Bread', expectedPrice: '$0.99', realPrice: '$0.89', inCart: true},
         {id: 3, title: 'Coca-Cola', expectedPrice: '$1.49', realPrice: '$1.49', inCart: true},
@@ -16,8 +17,8 @@ function App() {
     return (
         <div className="App">
             <ShopList
-                title = {"What to buy"}
-                whatToBuy = {thingsToBuy}
+                title={"What to buy"}
+                whatToBuy={thingsToBuy}
             />
         </div>
     );

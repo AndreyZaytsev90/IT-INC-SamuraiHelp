@@ -1,6 +1,7 @@
 import React from 'react';
 import {ShopListPropsType} from "./Typisation";
 
+
 export const ShopList = (props: ShopListPropsType) => {
     return (
         <div>
