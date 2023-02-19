@@ -59,7 +59,7 @@
             return el
         }*/
         for (let i = 0; i < 3; i++) {
-            if(validStatuses[i] === el.status){
+            if (validStatuses[i] === el.status) {
                 return el
             }
         }
@@ -97,16 +97,31 @@
 
 
     // task 5 - you are given a string of space separated numbers, and have to return the highest and lowest number.
+    // вам дается строка чисел, разделенных пробелами, и вы должны вернуть наибольшее и наименьшее число.
+
+    function highAndLow(string) {
+        Number(string)
+        let max
+        let min
+        for (let i = 0; i < 10; i++) {
+            string = max
+        }
+        return string
+    }
 
     // Examples
-    // highAndLow("1 2 3 4 5");  // return "5 1"
+    const result = highAndLow("1 2 3 4 5");  // return "5 1"
+    console.log(result.replace(/\s+/g, " "))
     // highAndLow("1 2 -3 4 5"); // return "5 -3"
     // highAndLow("1 9 3 4 -5"); // return "9 -5"
 
     // Notes
     // All numbers are valid Int32, no need to validate them.
+    //Все числа действительны Int32, их не нужно проверять.
     // There will always be at least one number in the input string.
+    //Во входной строке всегда будет хотя бы одно число.
     // Output string must be two numbers separated by a single space, and highest number is first.
+    //Выходная строка должна состоять из двух чисел, разделенных одним пробелом, причем наибольшее число должно быть первым.
 
 
     // function highAndLow(numbers){}
