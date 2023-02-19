@@ -1,0 +1,116 @@
+<script>
+
+
+    // task 1 - вывести массив пользователей с возрастом менее 30 лет
+
+    const users = [
+        {name: 'Selim', age: 34},
+        {name: 'Eric', age: 20},
+        {name: 'Roma', age: 30},
+        {name: 'Natasha', age: 29}
+    ];
+    /*const usersUnder30 = users.map((el) => {
+        if (el.age < 30) {
+            return el
+        }
+    })*/
+    //const usersUnder30 = users.map((el) => el.age < 30 ? el : '')
+    /* const usersUnder30 = users.filter((el) => el.age < 30 ? el : '')
+     console.log(usersUnder30);
+
+     let newUsers = [...users]
+     console.log(newUsers === users) //false
+     console.log(newUsers)
+     console.log(users[0] === newUsers[0] ) //true
+
+     const newUsers2 = users.map(el => {
+         return {...el} // возвращаем новый объект и раскукоживаем в него элементы старого массива
+     })
+
+     console.log(newUsers2)
+     console.log(users[0] === newUsers2[0]) // false*/
+
+
+    // task 2 - получить имена студентов и записать их заглавными буквами
+
+    let studentRecords = [
+        {name: 'John', id: 123, marks: 98},
+        {name: 'Baba', id: 101, marks: 23},
+        {name: 'yaga', id: 200, marks: 45},
+        {name: 'Wick', id: 115, marks: 75}
+    ]
+
+    let newArray = studentRecords.map(el => el.name.toUpperCase())
+    console.log(newArray)
+
+
+    // task 3 - вывести массив имён людей, у которых валидный статус ( т.е. статус существует в массиве validStatuses)
+
+    const validStatuses = ["success", "final", "done"];
+
+    const people = [
+        {name: "Max", age: 20, status: "in-progress"},
+        {name: "Sam", age: 21, status: "done"},
+        {name: "Dan", age: 30, status: "success"},
+    ];
+
+    const peopleWithValidStatus = people.filter((el) => {
+        /*if (el.status !== validStatuses[1]) {
+            return el
+        }*/
+        for (let i = 0; i < 3; i++) {
+            if(validStatuses[i] === el.status){
+                return el
+            }
+        }
+    }).map(el => el.name)
+    console.log(peopleWithValidStatus); // ['Sam', 'Dan']
+
+
+    // task 4 - сделать копию объекта user, используя цикл
+
+
+    let user = {
+        name: "John",
+        age: 30,
+        isAdmin: true
+    };
+
+    let copyUser = {}
+    for (const key in user) {
+        copyUser[key] = user[key]
+    }
+
+    // // ...
+
+    console.log(copyUser);
+
+
+    // info
+
+    // let i = 0;
+
+    // do {
+    //   document.documentElement.innerHTML = i;
+    //   i = i + 1;
+    // } while (i < 5);
+
+
+    // task 5 - you are given a string of space separated numbers, and have to return the highest and lowest number.
+
+    // Examples
+    // highAndLow("1 2 3 4 5");  // return "5 1"
+    // highAndLow("1 2 -3 4 5"); // return "5 -3"
+    // highAndLow("1 9 3 4 -5"); // return "9 -5"
+
+    // Notes
+    // All numbers are valid Int32, no need to validate them.
+    // There will always be at least one number in the input string.
+    // Output string must be two numbers separated by a single space, and highest number is first.
+
+
+    // function highAndLow(numbers){}
+    // console.log(highAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4")); // , "42 -9"
+
+
+</script>
