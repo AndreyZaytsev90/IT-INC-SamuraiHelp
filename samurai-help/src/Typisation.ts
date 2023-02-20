@@ -1,7 +1,7 @@
 export type ThingsToBuyPropsType = Array<ThingPropsType>
 
 export type ThingPropsType = {
-    id: number,
+    id: string,
     title: string,
     expectedPrice: string,
     realPrice: string,
