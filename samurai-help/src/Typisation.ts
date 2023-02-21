@@ -10,5 +10,6 @@ export type ThingPropsType = {
 
 export type ShopListPropsType = {
     title: string,
-    whatToBuy: ThingsToBuyPropsType
+    whatToBuy: ThingsToBuyPropsType,
+    deleteItem : (id: string) => void
 }

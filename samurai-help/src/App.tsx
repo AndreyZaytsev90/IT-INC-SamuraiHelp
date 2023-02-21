@@ -14,12 +14,16 @@ function App() {
         {id: v1(), title: 'Eggs', expectedPrice: '$2.49', realPrice: '$3.99', inCart: false},
         {id: v1(), title: 'Cakes', expectedPrice: '$4.99', realPrice: '$6.99', inCart: false},
     ]
+    const onClickDeleteItemHandler = (id: string) => {
+        alert('id удаленного товара: ' + id)
+    }
 
     return (
         <div className="App">
             <ShopList
                 title={"What to buy"}
                 whatToBuy={thingsToBuy}
+                deleteItem={onClickDeleteItemHandler}
             />
         </div>
     );

@@ -10,13 +10,17 @@ export const ShopList = (props: ShopListPropsType) => {
                 {props.whatToBuy.map((el) => {
                     return (
                         <li key={el.id}>
-                            <div><b>{el.title}</b></div>
+                            <div>
+                                <b>{el.title}</b>
+                                <button onClick={() => props.deleteItem(el.id)}>-X-</button>
+                            </div>
                             <div>{'expected price: ' + el.expectedPrice}</div>
                             <div>{'real price: ' + el.realPrice}</div>
                             <span>in basket: </span>
                             <input type={"checkbox"} checked={el.inCart}/>
                         </li>
-                    )})}
+                    )
+                })}
             </ol>
             <div>
                 <button>The whole list</button>
