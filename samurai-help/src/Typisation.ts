@@ -11,5 +11,5 @@ export type ThingPropsType = {
 export type ShopListPropsType = {
     title: string,
     whatToBuy: ThingsToBuyPropsType,
-    deleteItem : (id: string) => void
+    onClickDeleteItemHandler : (id: string, title: string) => void
 }

@@ -12,7 +12,7 @@ export const ShopList = (props: ShopListPropsType) => {
                         <li key={el.id}>
                             <div>
                                 <b>{el.title}</b>
-                                <button onClick={() => props.deleteItem(el.id)}>-X-</button>
+                                <button onClick={() => props.onClickDeleteItemHandler(el.id, el.title)}>-X-</button>
                             </div>
                             <div>{'expected price: ' + el.expectedPrice}</div>
                             <div>{'real price: ' + el.realPrice}</div>
