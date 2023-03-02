@@ -30,6 +30,11 @@ function App() {
                 whatToBuy={thingsToBuy}
                 onClickDeleteItemHandler={onClickDeleteItemHandler}
             />
+            <ShopList
+                title={"What to buy"}
+                whatToBuy={thingsToBuy}
+                onClickDeleteItemHandler={onClickDeleteItemHandler}
+            />
         </div>
     );
 }
